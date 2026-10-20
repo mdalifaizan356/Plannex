@@ -17,9 +17,7 @@ const mongo_url = process.env.MONGO_URL;
 
 // Allowed Origins for Development and Production
 const allowedOrigins = [
-    "http://localhost:5173",
-    "http://192.168.29.179:5173",
-    "https://task-board-smoky.vercel.app"
+    "https://plannex.ain360.in/"
 ]; 
 
 // CORS Configuration
