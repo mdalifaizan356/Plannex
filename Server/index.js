@@ -17,7 +17,8 @@ const mongo_url = process.env.MONGO_URL;
 
 // Allowed Origins for Development and Production
 const allowedOrigins = [
-    "https://plannex.ain360.in/"
+    "http://localhost:5173",
+    "https://plannex.ain360.in"
 ]; 
 
 // CORS Configuration
