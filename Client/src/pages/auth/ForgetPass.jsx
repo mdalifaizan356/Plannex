@@ -91,11 +91,8 @@ const ForgetPass = () => {
         <div className="bg-white" style={{padding: "clamp(24px, 5vw, 42px)", borderRadius: "24px", border: "1px solid rgba(255,255,255,0.9)", boxShadow: "0 24px 70px rgba(36,42,90,0.12)"}}>
           <div className="text-center mb-4">
             <span className="d-inline-flex align-items-center gap-2" style={{padding: "7px 12px", borderRadius: "30px", background: "#f0efff", color: "#5b50e9", fontSize: "10px", fontWeight: "800", letterSpacing: "1px", marginBottom: "15px"}}>
-              <FaShieldAlt /> CREATE YOUR ACCOUNT
+              <FaShieldAlt /> CREATE New Password
             </span>
-            <p className="mb-0" style={{color: "#85899d", fontSize: "13px", lineHeight: "1.8"}}>
-              Create your account and bring your projects<br className="d-none d-sm-block" />together in one place.
-            </p>
           </div>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">

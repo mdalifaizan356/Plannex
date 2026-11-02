@@ -9,7 +9,7 @@ module.exports = async (req, res, next) => {
             return res.status(401).json({ message: "No token provided" });
         }
 
-        const splitToken = token.split(" ")[1];
+        const splitToken = token.split(" ")[1]; 
         const decoded = jwt.verify(splitToken, secretKey);
 
         if (!decoded) {

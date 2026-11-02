@@ -22,7 +22,7 @@ export const getCurrentUser = async(data)=>{
 
 export const updatePassword = async(data)=>{
     const res = await axiosInstance.patch("newuser/recoverPassword", data);
-    return res;
+    return res; 
 }
 
 

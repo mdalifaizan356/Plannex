@@ -107,25 +107,15 @@ function DashHeader() {
           <Dropdown align="end">
             <Dropdown.Toggle variant="light" id="profile-dropdown" className="border rounded-4 d-flex align-items-center gap-2 bg-white text-dark shadow-none p-2">
               <span className="rounded-3 d-inline-flex align-items-center justify-content-center fw-bold flex-shrink-0" style={{width: 38, height: 38, backgroundColor: "#eeedff", color: "#635bff"}}>
-                {user?.name?.charAt(0)?.toUpperCase() || <FaUser />}
+                {user?.Name?.charAt(0)?.toUpperCase() || <FaUser />}
               </span>
               <span className="d-none d-sm-flex flex-column text-start">
-                <span className="fw-bold small">{user?.name || "My Account"}</span>
+                <span className="fw-bold small">{user?.Name || "My Account"}</span>
                 <span className="text-secondary small">Account</span>
               </span>
             </Dropdown.Toggle>
 
             <Dropdown.Menu className="p-2 rounded-4 border shadow mt-2">
-              <div className="d-flex align-items-center gap-3 p-2">
-                <span className="rounded-3 d-inline-flex align-items-center justify-content-center fw-bold flex-shrink-0" style={{width: 44, height: 44, backgroundColor: "#eeedff", color: "#635bff"}}>
-                  {user?.name?.charAt(0)?.toUpperCase() || <FaUser />}
-                </span>
-                <div className="overflow-hidden">
-                  <div className="fw-bold text-dark small">{user?.name || "User"}</div>
-                  <div className="text-secondary small text-break">{user?.email || ""}</div>
-                </div>
-              </div>
-              <Dropdown.Divider />
               <Dropdown.Item as={Link} to="/dashboard/editprofile" className="rounded-3 py-2"><FaUser className="me-2" />Edit Profile</Dropdown.Item>
               <Dropdown.Item as={Link} to="/dashboard/changepass" className="rounded-3 py-2"><FaLock className="me-2" />Change Password</Dropdown.Item>
               <Dropdown.Item as={Link} to="/dashboard/billing" className="rounded-3 py-2"><FaCreditCard className="me-2" />Billing &amp; Plan</Dropdown.Item>

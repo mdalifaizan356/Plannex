@@ -121,8 +121,10 @@ exports.loginUser = async (req, res) => {
 exports.fetchUser = async (req, res) => {
     try {
         const user = req.user;
-        res.json(user);
-        console.log(user);
+        res.status(200).json({
+            user: user,
+            message: "Server Error"
+        });
     } catch (error) {
         console.error("Error fetching user:", error);
         res.status(500).json({ message: "Server Error" });

@@ -4,7 +4,7 @@ import { getCurrentUser } from "../lib/api/authApi";
 export const UserContext = createContext();
 
 const UserContextProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
 
     const fetchUser = async () => { 
@@ -13,10 +13,12 @@ const UserContextProvider = ({ children }) => {
             if (!token) {
                 setUser(null);
                 setLoading(false);
-                return;
+                return; 
             }
             const res = await getCurrentUser({headers: { Authorization: `Bearer ${token}` }});
-            setUser(res.data);
+            console.log(user);
+            setUser(res.data.user);
+            console.log(user);
         } catch (error) {
             console.error("Error fetching user:", error);
             localStorage.removeItem("token");

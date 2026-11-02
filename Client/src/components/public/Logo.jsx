@@ -9,7 +9,7 @@ function Logo() {
         <span className="d-flex align-items-center justify-content-center rounded-3 text-white" style={{width: "42px", height: "42px", background: "linear-gradient(135deg, #6366f1, #4338ca)", boxShadow: "0 4px 10px rgba(79, 70, 229, 0.2)"}}>
             <FaClipboardCheck size={21} />
         </span>
-        <span>
+        <span style={{ color: "#d1820c" }}>
             Plan<span style={{ color: "#6366f1" }}>nex</span>
         </span>
     </Navbar.Brand>

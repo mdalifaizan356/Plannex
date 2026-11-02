@@ -26,7 +26,7 @@ const SignIn = () => {
       setSubmitting(true);
       const response = await signIn({Email: formData.Email.trim(), Password: formData.Password,});
       if (response.status === 200) {
-        const { token, user } = response.data;
+        const { token, user } = response.data; 
         if (token) {
           localStorage.setItem("token", token);
         }
